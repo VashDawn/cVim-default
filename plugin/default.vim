@@ -74,7 +74,9 @@ set t_ut=
 set winminheight=0
 set wildmode=list:longest,full
 
-set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
+" set listchars=tab:→\ ,eol:↵,trail:·,extends:↷,precedes:↶
+set list
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
 
 set whichwrap+=<,>,h,l  " Allow backspace and cursor keys to cross line boundaries
 
