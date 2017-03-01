@@ -44,7 +44,7 @@ endif
 set shortmess=atOI " No help Uganda information, and overwrite read messages to avoid PRESS ENTER prompts
 set ignorecase     " Case sensitive search
 set smartcase      " Case sensitive when uc present
-set scrolljump=5   " Line to scroll when cursor leaves screen
+set scrolljump=1   " Line to scroll when cursor leaves screen
 set scrolloff=3    " Minumum lines to keep above and below cursor
 set nowrap         " Do not wrap long lines
 set shiftwidth=4   " Use indents of 4 spaces
@@ -273,24 +273,24 @@ endif
     " Window {
       if !exists('g:vim_better_default_window_key_mapping') ||
             \ g:vim_better_default_window_key_mapping
-        nnoremap <Leader>ww <C-W>w
-        nnoremap <Leader>wr <C-W>r
-        nnoremap <Leader>wd <C-W>c
-        nnoremap <Leader>wq <C-W>q
-        nnoremap <Leader>wj <C-W>j
-        nnoremap <Leader>wk <C-W>k
-        nnoremap <Leader>wh <C-W>h
-        nnoremap <Leader>wl <C-W>l
-        nnoremap <Leader>wH <C-W>5<
-        nnoremap <Leader>wL <C-W>5>
-        nnoremap <Leader>wJ :resize +5<CR>
-        nnoremap <Leader>wK :resize -5<CR>
-        nnoremap <Leader>w= <C-W>=
-        nnoremap <Leader>ws <C-W>s
-        nnoremap <Leader>w- <C-W>s
-        nnoremap <Leader>wv <C-W>v
-        nnoremap <Leader>w\| <C-W>v
-        nnoremap <Leader>w2 <C-W>v
+        " nnoremap <Leader>ww <C-W>w
+        " nnoremap <Leader>wr <C-W>r
+        " nnoremap <Leader>wd <C-W>c
+        " nnoremap <Leader>wq <C-W>q
+        " nnoremap <Leader>wj <C-W>j
+        " nnoremap <Leader>wk <C-W>k
+        " nnoremap <Leader>wh <C-W>h
+        " nnoremap <Leader>wl <C-W>l
+        " nnoremap <Leader>wH <C-W>5<
+        " nnoremap <Leader>wL <C-W>5>
+        " nnoremap <Leader>wJ :resize +5<CR>
+        " nnoremap <Leader>wK :resize -5<CR>
+        " nnoremap <Leader>w= <C-W>=
+        " nnoremap <Leader>ws <C-W>s
+        " nnoremap <Leader>w- <C-W>s
+        " nnoremap <Leader>wv <C-W>v
+        " nnoremap <Leader>w\| <C-W>v
+        " nnoremap <Leader>w2 <C-W>v
       endif
     " }
 
