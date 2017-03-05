@@ -296,6 +296,15 @@ endif
       endif
     " }
 
+    " C key mappings {
+        nnoremap <leader>q :q<cr>
+        nnoremap <leader>w :w<cr>
+        nnoremap <leader>x :x<cr>
+
+        nnoremap tt :tabnew<cr>
+
+        inoremap jj <Esc>
+
   endif
 
 " }
