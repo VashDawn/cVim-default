@@ -304,6 +304,11 @@ endif
         nnoremap tt :tabnew<cr>
 
         inoremap jj <Esc>
+    " }
+    
+    " C abbreviations {
+        ca tt tabnew
+    " }
 
   endif
 
