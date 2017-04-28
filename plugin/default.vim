@@ -42,8 +42,8 @@ if !has('nvim')
 endif
 
 set shortmess=atOI " No help Uganda information, and overwrite read messages to avoid PRESS ENTER prompts
-set ignorecase     " Case sensitive search
-set smartcase      " Case sensitive when uc present
+set ignorecase     " Case insensitive search
+set smartcase      " ... but case sensitive when uc present
 set scrolljump=1   " Line to scroll when cursor leaves screen
 set scrolloff=3    " Minumum lines to keep above and below cursor
 set nowrap         " Do not wrap long lines
@@ -115,6 +115,11 @@ command! W w !sudo tee % > /dev/null
     let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
     let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
     let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+  endif
+
+  " inside neovim
+  if has('nvim')
+    let $NVIM_TUI_ENABLE_CURSOR_SHAPE=2
   endif
 " }
 
@@ -192,19 +197,19 @@ endif
         nnoremap <Leader>d  <C-d>
         nnoremap <Leader>u  <C-u>
         " Insert mode shortcut
-        inoremap <C-h> <Left>
+        inoremap <C-h> <BS>
         inoremap <C-j> <Down>
         inoremap <C-k> <Up>
-        inoremap <C-l> <Right>
+        inoremap <C-l> <Delete>
         " Bash like
         inoremap <C-a> <Home>
         inoremap <C-e> <End>
         inoremap <C-d> <Delete>
         " Command mode shortcut
-        cnoremap <C-h> <left>
+        cnoremap <C-h> <BS>
         cnoremap <C-j> <Down>
         cnoremap <C-k> <Up>
-        cnoremap <C-l> <Right>
+        cnoremap <C-l> <Delete>
         cnoremap <C-a> <Home>
         cnoremap <C-e> <End>
         cnoremap <C-d> <Delete>
@@ -222,7 +227,7 @@ endif
         " Redo
         nnoremap U <C-r>
         " Quick command mode
-        nnoremap ; :
+        nnoremap <CR> :
         " Yank to the end of line
         nnoremap Y y$
        " Auto indent pasted text
@@ -296,7 +301,7 @@ endif
       endif
     " }
 
-    " C key mappings {
+    " cVim key mappings {
         nnoremap <leader>q :q<cr>
         nnoremap <leader>w :w<cr>
         nnoremap <leader>x :x<cr>
